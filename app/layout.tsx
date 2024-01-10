@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
+import { Header } from "@/Components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={clsx(`${inter.className}
-       bg-gray-50 text-gray-950 relative`)}
+       bg-gray-50 text-gray-950 relative h-[5000px]`)}
       >
         <div
           className={clsx(
@@ -53,10 +54,9 @@ export default function RootLayout({
             "lg:left-[-28rem]",
             "xl:left-[-15rem]",
             "2xl:left-[-5rem]"
-            
           )}
         ></div>
-
+        <Header />
         {children}
       </body>
     </html>
