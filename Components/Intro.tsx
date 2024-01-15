@@ -45,7 +45,7 @@ export const Intro = () => {
         </div>
       </div>
 
-      <motion.p
+      <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export const Intro = () => {
         <span className="font-bold">1 year</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
-      </motion.p>
+      </motion.h1>
 
       <motion.div
         className={clsx(
@@ -119,8 +119,12 @@ export const Intro = () => {
             "focus:scale-110",
             "hover:scale-110",
             "active:scale-105",
-            "transition duration-300"
+            "transition duration-300",
+            "border",
+            "border-black/10"
           )}
+          href="/CV.pdf"
+          download
         >
           Download CV{" "}
           <HiDownload
@@ -137,12 +141,22 @@ export const Intro = () => {
           className={clsx(
             "bg-white",
             "text-gray-700",
+            "cursor-pointer",
             "p-4",
             "flex",
             "items-center",
             "gap-2",
-            "rounded-full"
+            "rounded-full",
+            "focus:scale-[1.15]",
+            "hover:scale-[1.15]",
+            "hover:text-blue-600",
+            "active:scale-105",
+            "transition duration-300",
+            "border",
+            "border-black/10"
           )}
+          href="https://www.linkedin.com/in/dmmtapia/"
+          target="_blank"
         >
           <BsLinkedin />
         </a>
@@ -152,13 +166,23 @@ export const Intro = () => {
           className={clsx(
             "bg-white",
             "text-gray-700",
+            "cursor-pointer",
             "p-4",
             "flex",
             "items-center",
             "gap-2",
             "rounded-full",
-            "text-[1.2rem]"
+            "text-[1.2rem]",
+            "focus:scale-[1.15]",
+            "hover:scale-[1.15]",
+            "hover:text-gray-950",
+            "active:scale-105",
+            "transition duration-300",
+            "border",
+            "border-black/10"
           )}
+          href="https://github.com/dmmtdeveloper"
+          target="_blank"
         >
           <FaGithubSquare />
         </a>
