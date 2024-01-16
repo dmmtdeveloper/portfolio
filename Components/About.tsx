@@ -13,11 +13,14 @@ export const About = () => {
         "mb-28",
         "leading-8",
         "text-center",
-        "sm:mb-40"
+        "sm:mb-40",
+        /*----scroll to about----*/
+        "scroll-m-28"
       )}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
+      id="about"
     >
       <Heading>About Me</Heading>
       <p className="mb-3 text-left">

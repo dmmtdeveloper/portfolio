@@ -4,9 +4,11 @@ import { Heading } from "./Heading";
 import { projectsData } from "@/lib/data";
 import Project from "./Project";
 
+
+
 export const Projects = () => {
   return (
-    <section>
+    <section id="projects" className="scroll-mt-28">
       <Heading>My Projects</Heading>
 
       <div>

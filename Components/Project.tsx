@@ -24,12 +24,18 @@ export default function Project({
 
   return (
     <motion.div
+      className={clsx(
+        "group",
+        "mb-3",
+        "sm:mb-8",
+        "last:mb-0",
+      )}
       ref={ref}
       style={{
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0 "
+      id="projects"
     >
       <section
         className={clsx(
@@ -46,7 +52,7 @@ export default function Project({
           "sm:mb-8",
           "last:mb-0",
           "group-even:pl-12",
-          /*----Hover effect*----*/
+          /*----Hover effect----*/
           "hover:bg-gray-200",
           "transition"
         )}
@@ -98,11 +104,11 @@ export default function Project({
             "shadow-2xl",
             "group-even:right-[initial]",
             "group-even:-left-40",
-            /*----Hover effect*----*/
+            /*----Hover effect----*/
             "group-hover:-translate-x-3",
             "group-hover:-translate-y-3",
             "group-hover:-rotate-2",
-            /*----Hover left effect*----*/
+            /*----Hover left effect----*/
             "group-even:group-hover:translate-x-3",
             "group-even:group-hover:translate-y-3",
             "group-even:group-hover:rotate-2",
