@@ -29,14 +29,14 @@ export default function Project({
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="mb-3 sm:mb-8 last:mb-0"
+      className="group mb-3 sm:mb-8 last:mb-0 "
     >
       <section
         className={clsx(
-          "group",
           "bg-gray-100",
           "max-w-[42rem]",
           "border",
+          "rounded-lg",
           "border-black/5",
           "overflow-hidden",
           "sm:pr-8",
@@ -45,7 +45,7 @@ export default function Project({
           "mb-3",
           "sm:mb-8",
           "last:mb-0",
-          "even:pl-8",
+          "group-even:pl-12",
           /*----Hover effect*----*/
           "hover:bg-gray-200",
           "transition"
