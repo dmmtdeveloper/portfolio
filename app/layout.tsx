@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import { Header } from "@/Components/Header";
+import { ActiveSectionContextProvider } from "@/Context/Active-section-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,8 +57,10 @@ export default function RootLayout({
             "2xl:left-[-5rem]"
           )}
         ></div>
-        <Header />
-        {children}
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );

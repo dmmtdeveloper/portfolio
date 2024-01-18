@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
 import clsx from "clsx";
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useActiveSectionContext } from "@/Context/Active-section-context";
 
 export const Header = () => {
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <header className={clsx("z-[999] relative")}>
       <motion.div
@@ -67,7 +68,8 @@ export const Header = () => {
                 "h-3/4",
                 "flex",
                 "items-center",
-                "justify-center"
+                "justify-center",
+                "relative"
               )}
               key={link.hash}
               initial={{ y: -100, opacity: 0 }}
@@ -82,11 +84,35 @@ export const Header = () => {
                   "px-3 py-3",
                   /*Hover*/
                   "hover:text-gray-950",
-                  "transition"
+                  "transition",
+                  {
+                    "text-gray-900": activeSection === link.name,
+                  }
                 )}
                 href={link.hash}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
               >
                 {link.name}
+                {link.name === activeSection && (
+                  <motion.span
+                    className={clsx(
+                      "bg-gray-200",
+                      "rounded-full",
+                      "absolute",
+                      "inset-0",
+                      "-z-10"
+                    )}
+                    layoutId="activeSection"
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 30,
+                    }}
+                  ></motion.span>
+                )}
               </Link>
             </motion.li>
           ))}

@@ -3,10 +3,15 @@ import React from "react";
 import clsx from "clsx";
 import { Heading } from "./Heading";
 import { motion } from "framer-motion";
+import { useSectionInView } from "@/lib/hooks";
 
 export const About = () => {
+  /*----scroll functionality----*/
+  const { ref } = useSectionInView("About");
+
   return (
     <motion.section
+      ref={ref}
       className={clsx(
         "flex flex-col",
         "max-w-[45rem]",
