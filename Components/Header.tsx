@@ -9,7 +9,7 @@ import { useActiveSectionContext } from "@/Context/Active-section-context";
 export const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
-    <header className={clsx("z-[999] relative")}>
+    <header className={clsx("z-[999] relative pt-28")}>
       <motion.div
         className={clsx(
           "fixed",

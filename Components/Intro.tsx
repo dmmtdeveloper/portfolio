@@ -26,7 +26,7 @@ export const Intro = () => {
         "scroll-mt-[100rem]"
       )}
     >
-      <div className="flex items-center justify-center">
+      <div className="flex">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -40,7 +40,7 @@ export const Intro = () => {
               alt="David portrait"
               quality="95"
               priority={true}
-              className="h-28 w-28 border-[0.35rem] border-white rounded-full object-cover shadow-xl"
+              className="h-20 w-20 border-[0.35rem] border-white rounded-full object-cover shadow-xl"
             />
           </motion.div>
 
@@ -55,29 +55,31 @@ export const Intro = () => {
               duration: 1,
             }}
           >
-            👋
+            <p className="text-2xl">👋</p>
           </motion.span>
         </div>
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 text-left text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm David.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">1 year</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <div className="flex flex-col gap-6">
+          <p className="font-bold text-5xl">Hey, soy David.</p>
+          <div>
+            <span className="font-semibold">+1 año de experiencia.</span>{" "}
+            <span>Desarrollador Web</span>{" "}
+            <span className="font-bold">Full-Stack</span> Disfruto creando{" "}
+            <span>sitios web y aplicaciones</span>
+          </div>
+        </div>
       </motion.h1>
 
       <motion.div
         className={clsx(
           "flex",
           "flex-col",
-          "items-center",
-          "justify-center",
           "gap-6",
           /*responsive*/
           "sm:flex-row"
