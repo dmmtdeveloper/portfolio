@@ -28,13 +28,13 @@ export const About = () => {
       id="about"
     >
       <Heading>About Me</Heading>
-      <p className="mb-3 text-left">
+      <p className="mb-3 text-center">
         Mi trayectoria incluye la formación en Dibujo Técnico y una larga
         experiencia como Dibujante Proyectista en proyectos de arquitectura e
         ingeniería. Durante el transcurso del año 2022, mi interés se ha volcado
         hacia el Diseño UX/UI y el 2023 hacia el Desarrollo Frontend.
       </p>
-      <p className="text-left">
+      <p className="text-center">
         Me tomo con entusiasmo el aprender tecnologías nuevas y enfrentar nuevos
         desafíos, quiero contribuir con mi creatividad y habilidades técnicas en
         un equipo dinámico, mientras sigo desarrollando proyectos personales que

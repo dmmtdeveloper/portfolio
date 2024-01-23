@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
-import { Onest } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import { Header } from "@/Components/Header";
 import { ActiveSectionContextProvider } from "@/Context/Active-section-context";
-
-// const inter = Inter({ subsets: ["latin"] });
-const inter = Onest({ subsets: ["latin"] });
+import { onest } from "@/ui/fonts";
 
 export const metadata: Metadata = {
   title: "David | Personal Portfolio",
@@ -22,9 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={clsx(`${inter.className}
-       bg-gray-50 text-gray-950 relative h-[5000px] pt-28 sm:pt-36`)}
+        className={`${onest.className} antialiased 
+       bg-gray-50 text-gray-950 relative h-[5000px] pt-28 sm:pt-36`}
       >
+        
         <div
           className={clsx(
             "bg-[#fbe2e3]",
