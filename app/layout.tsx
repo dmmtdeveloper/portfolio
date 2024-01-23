@@ -20,9 +20,8 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <body
         className={`${onest.className} antialiased 
-       bg-gray-50 text-gray-950 relative h-[5000px] pt-28 sm:pt-36`}
+       bg-gray-50 text-gray-950 relative h-[5000px] pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
-        
         <div
           className={clsx(
             "bg-[#fbe2e3]",
@@ -35,7 +34,9 @@ export default function RootLayout({
             "blur-[10rem]",
             "-z-10",
             /* breack points */
-            "sm:w-[68.75rem]"
+            "sm:w-[68.75rem]",
+            /* dark-mode */
+            "dark:bg-[#946263]"
           )}
         ></div>
         <div
@@ -54,14 +55,16 @@ export default function RootLayout({
             "md:left-[-33rem]",
             "lg:left-[-28rem]",
             "xl:left-[-15rem]",
-            "2xl:left-[-5rem]"
+            "2xl:left-[-5rem]",
+            /* dark-mode */
+            "dark:bg-[#676394]"
           )}
         ></div>
         <ActiveSectionContextProvider>
           <Header />
           {children}
         </ActiveSectionContextProvider>
-        <ThemeSwitch/>
+        <ThemeSwitch />
       </body>
     </html>
   );
