@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { Header } from "@/Components/Header";
 import { ActiveSectionContextProvider } from "@/Context/Active-section-context";
 import { onest } from "@/ui/fonts";
+import { ThemeSwitch } from "@/Components/ThemeSwitch";
 
 export const metadata: Metadata = {
   title: "David | Personal Portfolio",
@@ -60,6 +61,7 @@ export default function RootLayout({
           <Header />
           {children}
         </ActiveSectionContextProvider>
+        <ThemeSwitch/>
       </body>
     </html>
   );
