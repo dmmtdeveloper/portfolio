@@ -5,6 +5,7 @@ import { Header } from "@/Components/Header";
 import { ActiveSectionContextProvider } from "@/Context/Active-section-context";
 import { onest } from "@/ui/fonts";
 import { ThemeSwitch } from "@/Components/ThemeSwitch";
+import { ThemeContextProvider } from "@/Context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "David | Personal Portfolio",
@@ -60,11 +61,13 @@ export default function RootLayout({
             "dark:bg-[#676394]"
           )}
         ></div>
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-        </ActiveSectionContextProvider>
-        <ThemeSwitch />
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <ThemeSwitch />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

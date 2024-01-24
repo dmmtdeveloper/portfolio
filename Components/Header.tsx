@@ -7,7 +7,8 @@ import Link from "next/link";
 import { useActiveSectionContext } from "@/Context/Active-section-context";
 
 export const Header = () => {
-  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   return (
     <header className={clsx("z-[999] relative pt-28")}>
       <motion.div
@@ -27,7 +28,11 @@ export const Header = () => {
           "backdrop-blur-[0.5rem]",
           /*breack points*/
           "sm:top-6 sm:h-[3.25rem]",
-          "sm:w-[36rem] sm:rounded-full"
+          "sm:w-[36rem] sm:rounded-full",
+          /*dark-mode*/
+          "dark: bg-gray-950",
+          "dark:border-black/40",
+          "dark:bg-opacity-75"
         )}
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
@@ -85,8 +90,11 @@ export const Header = () => {
                   /*Hover*/
                   "hover:text-gray-950",
                   "transition",
+                  /* dark-mode*/
+                  "dark:text-gray-500",
+                  "dark:hover:text-gray-300",
                   {
-                    "text-gray-900": activeSection === link.name,
+                    "text-gray-950 dark:text-gray-200": activeSection === link.name,
                   }
                 )}
                 href={link.hash}
@@ -103,7 +111,9 @@ export const Header = () => {
                       "rounded-full",
                       "absolute",
                       "inset-0",
-                      "-z-10"
+                      "-z-10",
+                      /* dark-mode*/
+                      "dark:bg-gray-800"
                     )}
                     layoutId="activeSection"
                     transition={{

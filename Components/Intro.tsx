@@ -8,6 +8,8 @@ import { HiDownload } from "react-icons/hi";
 import clsx from "clsx";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
+import { IconButtonLinkedIn } from "@/Components/Buttons/IconButtonLinkedIn";
+import { IconButtonGitHub } from "@/Components/Buttons/IconButtonGitHub";
 
 export const Intro = () => {
   /*----scroll kook functionality----*/
@@ -138,7 +140,10 @@ export const Intro = () => {
             "active:scale-105",
             "transition duration-300",
             "border",
-            "border-black/10"
+            "border-black/10",
+            /*dark-mode*/
+            "dark:bg-white/10",
+            "dark:text-gray-200"
           )}
           href="/CV.pdf"
           download
@@ -154,55 +159,10 @@ export const Intro = () => {
         </a>
 
         {/* ----Button Linkedin---- */}
-        <a
-          className={clsx(
-            "bg-white",
-            "text-gray-700",
-            "cursor-pointer",
-            "p-4",
-            "flex",
-            "items-center",
-            "gap-2",
-            "rounded-full",
-            "focus:scale-[1.15]",
-            "hover:scale-[1.15]",
-            "hover:text-blue-600",
-            "active:scale-105",
-            "transition duration-300",
-            "border",
-            "border-black/10"
-          )}
-          href="https://www.linkedin.com/in/dmmtapia/"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
+        <IconButtonLinkedIn />
 
         {/* ----Button GitHub---- */}
-        <a
-          className={clsx(
-            "bg-white",
-            "text-gray-700",
-            "cursor-pointer",
-            "p-4",
-            "flex",
-            "items-center",
-            "gap-2",
-            "rounded-full",
-            "text-[1.2rem]",
-            "focus:scale-[1.15]",
-            "hover:scale-[1.15]",
-            "hover:text-gray-950",
-            "active:scale-105",
-            "transition duration-300",
-            "border",
-            "border-black/10"
-          )}
-          href="https://github.com/dmmtdeveloper"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
+        <IconButtonGitHub />
       </motion.div>
     </section>
   );
