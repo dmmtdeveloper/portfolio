@@ -30,7 +30,7 @@ export const Header = () => {
           "sm:top-6 sm:h-[3.25rem]",
           "sm:w-[36rem] sm:rounded-full",
           /*dark-mode*/
-          "dark: bg-gray-950",
+          "dark:bg-gray-950",
           "dark:border-black/40",
           "dark:bg-opacity-75"
         )}
@@ -92,9 +92,9 @@ export const Header = () => {
                   "transition",
                   /* dark-mode*/
                   "dark:text-gray-500",
-                  "dark:hover:text-gray-300",
+                  "dark:hover:text-gray-200",
                   {
-                    "text-gray-950 dark:text-gray-200": activeSection === link.name,
+                    "text-gray-950 dark:text-gray-100": activeSection === link.name,
                   }
                 )}
                 href={link.hash}

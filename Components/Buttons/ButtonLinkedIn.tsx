@@ -3,35 +3,35 @@ import React from 'react'
 import { BsLinkedin } from 'react-icons/bs';
 
 
-export const IconButtonLinkedIn = () => {
+export const ButtonLinkedIn = () => {
   return (
     <React.Fragment>
       <a
         className={clsx(
           "bg-white",
-          "p-5",
+          "p-4",
           "text-gray-700",
           "hover:text-gray-950",
           "flex",
           "items-center",
           "gap-2",
           "rounded-full",
-          "focus:scale-[1.15]",
+          "focus:scale-[1.2]",
           "active:scale-105",
           "cursor-pointer",
           "border",
           "border-black/10",
-          /*hover*/
-          "hover:scale-[1.15]",
-          "hover:text-blue-700",
-          /*transition*/
+          /*----hover----*/
+          "hover:scale-[1.2]",
+          "hover:text-blue-600",
+          /*----transition----*/
           "transition",
           "duration-300",
-          /*dark-mode*/
+          /*----dark-mode----*/
           "dark:bg-white/10",
           "dark:text-white/60",
           "dark:hover:text-blue-600",
-          "dark:hover:bg-slate-300"
+          "dark:hover:bg-slate-400"
         )}
         href="https://www.linkedin.com/in/dmmtapia/"
         target="_blank"

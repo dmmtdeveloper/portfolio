@@ -1,15 +1,13 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { animate, motion } from "framer-motion";
-import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
+import { motion } from "framer-motion";
 import clsx from "clsx";
-import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
-import { IconButtonLinkedIn } from "@/Components/Buttons/IconButtonLinkedIn";
-import { IconButtonGitHub } from "@/Components/Buttons/IconButtonGitHub";
+import { ButtonLinkedIn } from "@/Components/Buttons/ButtonLinkedIn";
+import { ButtonGitHub } from "@/Components/Buttons/ButtonGitHub";
+import { ButtonCv } from "./Buttons/ButtonCv";
+import { ButtonContact } from "./Buttons/ButtonContact";
 
 export const Intro = () => {
   /*----scroll kook functionality----*/
@@ -70,10 +68,11 @@ export const Intro = () => {
         <div className="flex flex-col gap-6">
           <p className="font-bold text-5xl">Hey, soy David.</p>
           <div>
+            <span className="text-green-300">Desarrollador Web</span>{" "}
+            <span className="font-bold text-orange-300">Full-Stack</span>{" "}
+            Disfruto creando <span>sitios web y aplicaciones. </span>
+            <span>De ConCón</span>
             <span className="font-semibold">+1 año de experiencia.</span>{" "}
-            <span>Desarrollador Web</span>{" "}
-            <span className="font-bold">Full-Stack</span> Disfruto creando{" "}
-            <span>sitios web y aplicaciones</span>
           </div>
         </div>
       </motion.h1>
@@ -92,77 +91,10 @@ export const Intro = () => {
           delay: 0.1,
         }}
       >
-        {/* ----Button Contact---- */}
-        <Link
-          href="#contact"
-          className={clsx(
-            "group",
-            "bg-gray-900",
-            "text-white",
-            "px-7 py-3",
-            "flex",
-            "items-center",
-            "gap-2",
-            "rounded-full",
-            "outline-none",
-            "focus:scale-110",
-            "hover:scale-110",
-            "hover:bg-gray-950",
-            "active:scale-105",
-            "transition duration-300"
-          )}
-        >
-          Contact me here{" "}
-          <BsArrowRight
-            className={clsx(
-              "opacity-70",
-              "group-hover:translate-x-1",
-              "transition duration-300"
-            )}
-          />
-        </Link>
-
-        {/* ----Button CV---- */}
-        <a
-          className={clsx(
-            "group",
-            "cursor-pointer",
-            "bg-white",
-            "text-gray-900",
-            "px-7 py-3",
-            "flex",
-            "items-center",
-            "gap-2",
-            "rounded-full",
-            "outline-none",
-            "focus:scale-110",
-            "hover:scale-110",
-            "active:scale-105",
-            "transition duration-300",
-            "border",
-            "border-black/10",
-            /*dark-mode*/
-            "dark:bg-white/10",
-            "dark:text-gray-200"
-          )}
-          href="/CV.pdf"
-          download
-        >
-          Download CV{" "}
-          <HiDownload
-            className={clsx(
-              "opacity-60",
-              "group-hover:translate-y-1",
-              "transition duration-300"
-            )}
-          />{" "}
-        </a>
-
-        {/* ----Button Linkedin---- */}
-        <IconButtonLinkedIn />
-
-        {/* ----Button GitHub---- */}
-        <IconButtonGitHub />
+        <ButtonContact />
+        <ButtonCv />
+        <ButtonLinkedIn />
+        <ButtonGitHub />
       </motion.div>
     </section>
   );
