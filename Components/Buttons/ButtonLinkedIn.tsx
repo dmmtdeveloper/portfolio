@@ -1,7 +1,6 @@
-import clsx from 'clsx';
-import React from 'react'
-import { BsLinkedin } from 'react-icons/bs';
-
+import clsx from "clsx";
+import React from "react";
+import { BsLinkedin } from "react-icons/bs";
 
 export const ButtonLinkedIn = () => {
   return (
@@ -21,10 +20,10 @@ export const ButtonLinkedIn = () => {
           "cursor-pointer",
           "border",
           "border-black/10",
-          
+
           /*----hover----*/
           "hover:scale-[1.2]",
-          "hover:text-blue-600",
+          "hover:text-blue-500",
 
           /*----transition----*/
           "transition",
@@ -38,8 +37,8 @@ export const ButtonLinkedIn = () => {
         href="https://www.linkedin.com/in/dmmtapia/"
         target="_blank"
       >
-       <BsLinkedin />
+        <BsLinkedin />
       </a>
     </React.Fragment>
   );
-}
+};

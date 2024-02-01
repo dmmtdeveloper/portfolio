@@ -45,11 +45,16 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col"
         action={async (formData) => {
-          await sendEmail(formData);
+          const { data, error } = await sendEmail(formData);
+          if (error) {
+            alert(error);
+            return;
+          }
+          alert("El email se ha enviado correctamente");
         }}
       >
         <input
-          name="email"
+          name="senderEmail"
           required
           maxLength={500}
           placeholder="Tu Email"

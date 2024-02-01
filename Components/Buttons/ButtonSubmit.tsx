@@ -1,8 +1,10 @@
 import clsx from "clsx";
 import React from "react";
+import { useFormStatus } from "react-dom";
 import { FaPaperPlane } from "react-icons/fa";
 
 export const ButtonSubmit = () => {
+  const { pending } = useFormStatus();
   return (
     <button
       className={clsx(
@@ -27,20 +29,33 @@ export const ButtonSubmit = () => {
         "transition",
         "hover:bg-gray-950",
         "hover:shadow-md",
-        "hover:scale-110"
+        "hover:scale-110",
+
+        /* disabled */
+        "disabled:scale-100",
+        "disable:bg-opa"
+
+
       )}
       type="submit"
+      disabled={pending}
     >
-      submit
-      <FaPaperPlane
-        className={clsx(
-          "opacity-70",
-          "text-xs",
-          "transition-all",
-          "group-hover:translate-x-1",
-          "group-hover:-translate-y-1"
-        )}
-      />{" "}
+      {pending ? (
+        <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+      ) : (
+        <>
+          submit{" "}
+          <FaPaperPlane
+            className={clsx(
+              "opacity-70",
+              "text-xs",
+              "transition-all",
+              "group-hover:translate-x-1",
+              "group-hover:-translate-y-1"
+            )}
+          />
+        </>
+      )}
     </button>
   );
 };
