@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useActiveSectionContext } from "@/Context/Active-section-context";
 
-export const Header = () => {
+export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
   return (
@@ -94,7 +94,8 @@ export const Header = () => {
                   "dark:text-gray-500",
                   "dark:hover:text-gray-200",
                   {
-                    "text-gray-950 dark:text-gray-100": activeSection === link.name,
+                    "text-gray-950 dark:text-gray-100":
+                      activeSection === link.name,
                   }
                 )}
                 href={link.hash}
@@ -130,4 +131,4 @@ export const Header = () => {
       </nav>
     </header>
   );
-};
+}

@@ -50,7 +50,7 @@ export const ButtonCv = () => {
           className={clsx(
             "opacity-60",
             "group-hover:translate-y-1",
-            "transition duration-300"
+            "transition"
           )}
         />{" "}
       </a>

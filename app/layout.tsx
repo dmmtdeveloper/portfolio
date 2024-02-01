@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import clsx from "clsx";
-import { Header } from "@/Components/Header";
+import Header from "@/Components/Header";
 import { ActiveSectionContextProvider } from "@/Context/Active-section-context";
-import { onest } from "@/ui/fonts";
-import { ThemeSwitch } from "@/Components/ThemeSwitch";
+import ThemeSwitch from "@/Components/ThemeSwitch";
 import { ThemeContextProvider } from "@/Context/ThemeContext";
+import { onest } from "@/ui/fonts";
 
 export const metadata: Metadata = {
   title: "David | Personal Portfolio",
@@ -20,8 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${onest.className} antialiased 
-       bg-gray-50 text-gray-950 relative h-[5000px] pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={
+          `${onest.className} 
+          font-sans antialiased 
+          bg-gray-50 text-gray-950 
+          relative  
+          pt-28 sm:pt-36 
+          dark:bg-gray-900 
+          dark:text-gray-50 
+          dark:text-opacity-90`
+        }
       >
         <div
           className={clsx(

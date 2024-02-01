@@ -21,12 +21,14 @@ export const ButtonLinkedIn = () => {
           "cursor-pointer",
           "border",
           "border-black/10",
+          
           /*----hover----*/
           "hover:scale-[1.2]",
           "hover:text-blue-600",
+
           /*----transition----*/
           "transition",
-          "duration-300",
+
           /*----dark-mode----*/
           "dark:bg-white/10",
           "dark:text-white/60",

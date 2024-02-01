@@ -9,7 +9,7 @@ import { ButtonGitHub } from "@/Components/Buttons/ButtonGitHub";
 import { ButtonCv } from "./Buttons/ButtonCv";
 import { ButtonContact } from "./Buttons/ButtonContact";
 
-export const Intro = () => {
+export default function Intro() {
   /*----scroll kook functionality----*/
   const { ref } = useSectionInView("Home", 0.5);
 
@@ -68,11 +68,18 @@ export const Intro = () => {
         <div className="flex flex-col gap-6">
           <p className="font-bold text-5xl">Hey, soy David.</p>
           <div>
-            <span className="text-green-300">Desarrollador Web</span>{" "}
-            <span className="font-bold text-orange-300">Full-Stack</span>{" "}
-            Disfruto creando <span>sitios web y aplicaciones. </span>
-            <span>De ConCón</span>
-            <span className="font-semibold">+1 año de experiencia.</span>{" "}
+            <p className="font-normal">
+              +1 año de experiencia en{" "}
+              <span className="font-bold text-orange-300">
+                Desarrollado Web.
+              </span>
+            </p>{" "}
+
+            <span className="font-bold text-green-400">
+              Full-Stack Developer.
+            </span>{" "}
+            <span className="font-bold text-red-300">Diseño UX/UI</span> <span></span>{" "}
+            Disfruto creando <span className="font-bold">sitios web</span>
           </div>
         </div>
       </motion.h1>
@@ -98,4 +105,4 @@ export const Intro = () => {
       </motion.div>
     </section>
   );
-};
+}

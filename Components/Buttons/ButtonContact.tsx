@@ -2,8 +2,11 @@ import clsx from "clsx";
 import Link from "next/link";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
+import { useActiveSectionContext } from "@/Context/Active-section-context";
 
 export const ButtonContact = () => {
+   const { setActiveSection, setTimeOfLastClick } =
+     useActiveSectionContext();
   return (
     <React.Fragment>
       <Link
@@ -39,13 +42,17 @@ export const ButtonContact = () => {
           "disabled:cursor-not-allowed",
           "disabled:shadow"
         )}
+        onClick={() => {
+          setActiveSection("Contact");
+          setTimeOfLastClick(Date.now());
+        }}
       >
         Contact me here{" "}
         <BsArrowRight
           className={clsx(
             "opacity-70",
             "group-hover:translate-x-1",
-            "transition duration-300"
+            "transition"
           )}
         />
       </Link>

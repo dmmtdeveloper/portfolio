@@ -6,7 +6,7 @@ import Project from "./Project";
 
 import { useSectionInView } from "@/lib/hooks";
 
-export const Projects = () => {
+export default function Projects() {
   /*----scroll functionality----*/
   const { ref } = useSectionInView("Projects", 0.5);
 
@@ -23,4 +23,4 @@ export const Projects = () => {
       </div>
     </section>
   );
-};
+}

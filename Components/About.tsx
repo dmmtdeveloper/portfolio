@@ -5,7 +5,7 @@ import { Heading } from "./Heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
-export const About = () => {
+export default function About() {
   /*----scroll functionality----*/
   const { ref } = useSectionInView("About");
 
@@ -42,4 +42,4 @@ export const About = () => {
       </p>
     </motion.section>
   );
-};
+}

@@ -4,7 +4,7 @@ import clsx from "clsx";
 import React from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 
-export const ThemeSwitch = () => {
+export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -35,4 +35,4 @@ export const ThemeSwitch = () => {
       {theme === "light" ? <BsSun /> : <BsMoon />}
     </button>
   );
-};
+}
