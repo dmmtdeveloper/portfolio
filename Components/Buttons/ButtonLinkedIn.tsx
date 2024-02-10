@@ -23,7 +23,7 @@ export const ButtonLinkedIn = () => {
 
           /*----hover----*/
           "hover:scale-[1.2]",
-          "hover:text-blue-500",
+          "hover:text-blue-600",
 
           /*----transition----*/
           "transition",

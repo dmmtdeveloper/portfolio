@@ -8,8 +8,8 @@ export const ButtonCv = () => {
       <a
         className={clsx(
           /*----default state----*/
-          "bg-blue-500",
-          "text-white",
+          "bg-white",
+          "text-gray-600",
           "px-8 py-2 leading-6",
           "rounded-full",
           "font-semibold tracking-wide",
@@ -23,7 +23,7 @@ export const ButtonCv = () => {
 
           /*----hover----*/
           "transition",
-          "hover:bg-blue-600",
+          "hover:bg-gray-200",
           "hover:shadow-md",
 
           /*----focus statate----*/

@@ -35,8 +35,8 @@ export default function Intro() {
           >
             <Image
               src="/david.png"
-              width={"208"}
-              height={"208"}
+              width={"158"}
+              height={"158"}
               alt="David portrait"
               quality="95"
               priority={true}
@@ -65,21 +65,45 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <div className="flex flex-col gap-6">
-          <p className="font-bold text-5xl">Hey, soy David.</p>
+        <div className="flex flex-col gap-8">
+          <div className="flex gap-x-48">
+            <div>
+              <p className="font-bold text-5xl">Hola, soy</p>
+              <p className="font-bold text-5xl">David Martínez</p>
+            </div>
+            <div className="flex items-center justify-center">
+              {" "}
+              <a
+                href="https://www.linkedin.com/in/dmmtapia/"
+                target="_blank"
+                rel="noopener"
+                className="flex items-center justify-center hover:scale-105 transition"
+              >
+                <div>
+                  {" "}
+                  <span className="relative flex overflow-hidden rounded-full p-[1px]">
+                    {" "}
+                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>{" "}
+                    <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950/75 px-4 py-1 text-sm font-medium text-white backdrop-blur-3xl whitespace-nowrap">
+                      {" "}
+                      Disponible para trabajar{" "}
+                    </div>{" "}
+                  </span>{" "}
+                </div>
+              </a>{" "}
+            </div>
+          </div>
           <div>
-            <p className="font-normal">
-              +1 año de experiencia en{" "}
-              <span className="font-bold text-orange-300">
-                Desarrollado Web.
-              </span>
+            <p className="font-light text-3xl">
+              {/* +1 año de experiencia en{" "} */}
+              <span className=" dark: dark:text-white">
+                Desarrollador Web, Full-Stack{" "}
+                <span className="font-bold text-purple-500">MERN</span>
+              </span>{" "}
+              <span className="text-3xl"> Disfruto creando sitios web y</span>{" "}
+              <span className="text3xl">resolviendo problemas en</span>{" "}
+              <span className="font-bold text-[#FFCA53]">JavaScript</span>
             </p>{" "}
-
-            <span className="font-bold text-green-400">
-              Full-Stack Developer.
-            </span>{" "}
-            <span className="font-bold text-red-300">Diseño UX/UI</span> <span></span>{" "}
-            Disfruto creando <span className="font-bold">sitios web</span>
           </div>
         </div>
       </motion.h1>
