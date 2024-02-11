@@ -8,6 +8,7 @@ import { ButtonLinkedIn } from "@/Components/Buttons/ButtonLinkedIn";
 import { ButtonGitHub } from "@/Components/Buttons/ButtonGitHub";
 import { ButtonCv } from "./Buttons/ButtonCv";
 import { ButtonContact } from "./Buttons/ButtonContact";
+import { ButtonAvailable } from "./Buttons/ButtonAvailable";
 
 export default function Intro() {
   /*----scroll kook functionality----*/
@@ -66,32 +67,12 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <div className="flex flex-col gap-8">
-          <div className="flex gap-x-48">
+          <div className="flex justify-between">
             <div>
               <p className="font-bold text-5xl">Hola, soy</p>
               <p className="font-bold text-5xl">David Martínez</p>
             </div>
-            <div className="flex items-center justify-center">
-              {" "}
-              <a
-                href="https://www.linkedin.com/in/dmmtapia/"
-                target="_blank"
-                rel="noopener"
-                className="flex items-center justify-center hover:scale-105 transition"
-              >
-                <div>
-                  {" "}
-                  <span className="relative flex overflow-hidden rounded-full p-[1px]">
-                    {" "}
-                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>{" "}
-                    <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950/75 px-4 py-1 text-sm font-medium text-white backdrop-blur-3xl whitespace-nowrap">
-                      {" "}
-                      Disponible para trabajar{" "}
-                    </div>{" "}
-                  </span>{" "}
-                </div>
-              </a>{" "}
-            </div>
+            <ButtonAvailable />
           </div>
           <div>
             <p className="font-light text-3xl">
