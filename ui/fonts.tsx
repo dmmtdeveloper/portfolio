@@ -1,5 +1,5 @@
-import { Onest } from "next/font/google";
+import { Raleway } from "next/font/google";
 
-export const onest = Onest({
+export const fontRaleway = Raleway({
   subsets: ["latin"],
 });

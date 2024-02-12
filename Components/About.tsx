@@ -28,17 +28,11 @@ export default function About() {
       id="about"
     >
       <Heading>About Me</Heading>
-      <p className="mb-3 text-center">
-        Mi trayectoria incluye la formación en Dibujo Técnico y una larga
-        experiencia como Dibujante Proyectista en proyectos de arquitectura e
-        ingeniería. Durante el transcurso del año 2022, mi interés se ha volcado
-        hacia el Diseño UX/UI y el 2023 hacia el Desarrollo Frontend.
-      </p>
       <p className="text-center">
-        Me tomo con entusiasmo el aprender tecnologías nuevas y enfrentar nuevos
-        desafíos, quiero contribuir con mi creatividad y habilidades técnicas en
-        un equipo dinámico, mientras sigo desarrollando proyectos personales que
-        me ayudan a mejorar mis habilidades en programación.
+        De profesión Dibujante de proyectos de Arquitectura e Ingenieria.
+        Durante el transcurso del año 2022, mi interés se ha volcado hacia el
+        Diseño UX/UI y hacia el Desarrollo Frontend. Me tomo con entusiasmo el
+        aprender tecnologías nuevas y enfrentar nuevos desafíos.
       </p>
     </motion.section>
   );
