@@ -23,7 +23,7 @@ export const ButtonCv = () => {
 
           /*----hover----*/
           "transition",
-          "hover:bg-gray-200",
+          "hover:bg-gray-/20",
           "hover:shadow-md",
 
           /*----focus statate----*/

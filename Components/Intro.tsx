@@ -68,16 +68,16 @@ export default function Intro() {
       >
         <div className="flex flex-col gap-8">
           <div className="flex justify-between">
-            <div>
-              <p className="font-bold text-5xl">Hola, soy</p>
-              <p className="font-bold text-5xl">David Martínez</p>
+            <div className="flex flex-col gap-2">
+              <p className="font-normal text-4xl text-gray-900 dark:text-gray-50">Hola, soy</p>
+              <p className="font-bold text-7xl text-gray-900 dark:text-gray-50">David Martínez</p>
             </div>
             <ButtonAvailable />
           </div>
           <div>
-            <p className="font-light text-3xl">
+            <p className="font-normal text-3xl">
               {/* +1 año de experiencia en{" "} */}
-              <span className=" dark: dark:text-white">
+              <span className="dark:text-white">
                 Desarrollador Web, Full-Stack{" "}
                 <span className="font-bold text-purple-500">MERN</span>
               </span>{" "}

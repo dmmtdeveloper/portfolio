@@ -1,7 +1,7 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { CgStudio, CgWorkAlt } from "react-icons/cg";
+import { FaCss3, FaHtml5, FaReact, FaStudiovinari, FaUser } from "react-icons/fa";
+import { LuBook, LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/to do.jpg";
 import wordanalyticsImg from "@/public/wordanalytics.png";
@@ -35,28 +35,36 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduación bootcamp",
+    location: "Coding Dojo Latam",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "He finalizado con éxito un Bootcamp de 16 semanas en Coding Dojo, donde obtuve una sólida base de conocimientos y habilidades en programación web. Me enfoqué en dominar el lenguaje de programación JavaScript y el stack completo MERN.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "Ago. 2023 - Nov. 2023",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Curso CSS3",
+    location: "Udemy",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "Desarrollé habilidades para dominar CSS desde niveles básicos hasta avanzados, aplicando metodología BEM para nombrar las clases en mis estilos.",
+    icon: React.createElement(FaCss3),
+    date: "Agosto 2023",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "HTML5",
+    location: "Academia Hola Mundo",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Adquirí las habilidades avanzadas para utilizar HTML5, aprovechando casi todas sus etiquetas disponibles.",
+    icon: React.createElement(FaHtml5),
+    date: "Marzo - 2023",
+  },
+  {
+    title: "Diseño UX/UI Avanzado",
+    location: "CoderHouse",
+    description:
+      "Obtuve conocimientos en diseño de experiencia de usuario, resolución de problemas y diseño de interfaz de usuario.",
+    icon: React.createElement(FaUser),
+    date: "Septiembre - 2022",
   },
 ] as const;
 
@@ -88,13 +96,14 @@ export const skillsData = [
   "HTML",
   "CSS",
   "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
   "MongoDB",
   "Express",
+  "React",
+  "Node.js",
+  "TypeScript",
+  "Next.js",
+  "Git",
+  "Tailwind",
   "Framer Motion",
+  "Figma",
 ] as const;

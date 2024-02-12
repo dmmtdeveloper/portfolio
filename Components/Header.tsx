@@ -5,6 +5,7 @@ import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useActiveSectionContext } from "@/Context/Active-section-context";
+import ThemeSwitch from "./ThemeSwitch";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -38,6 +39,7 @@ export default function Header() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
+      <div></div>
       <nav
         className={clsx(
           "flex",
@@ -94,7 +96,7 @@ export default function Header() {
                   "dark:text-gray-500",
                   "dark:hover:text-gray-200",
                   {
-                    "text-gray-950 dark:text-gray-100":
+                    "text-gray-950 dark:text-white/80":
                       activeSection === link.name,
                   }
                 )}

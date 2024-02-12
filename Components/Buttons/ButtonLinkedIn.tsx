@@ -23,7 +23,7 @@ export const ButtonLinkedIn = () => {
 
           /*----hover----*/
           "hover:scale-[1.2]",
-          "hover:text-blue-600",
+          "hover:text-[#0A66C2]",
 
           /*----transition----*/
           "transition",
@@ -31,7 +31,7 @@ export const ButtonLinkedIn = () => {
           /*----dark-mode----*/
           "dark:bg-white/10",
           "dark:text-white/60",
-          "dark:hover:text-blue-600",
+          "dark:hover:text-[#0A66C2]",
           "dark:hover:bg-slate-400"
         )}
         href="https://www.linkedin.com/in/dmmtapia/"

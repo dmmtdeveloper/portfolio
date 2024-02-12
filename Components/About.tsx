@@ -28,11 +28,11 @@ export default function About() {
       id="about"
     >
       <Heading>About Me</Heading>
-      <p className="text-center">
+      <p className="text-center font-normal text-xl">
         De profesión Dibujante de proyectos de Arquitectura e Ingenieria.
         Durante el transcurso del año 2022, mi interés se ha volcado hacia el
         Diseño UX/UI y hacia el Desarrollo Frontend. Me tomo con entusiasmo el
-        aprender tecnologías nuevas y enfrentar nuevos desafíos.
+        aprender nuevas tecnologías y enfrentar desafíos profesionales.
       </p>
     </motion.section>
   );

@@ -50,8 +50,12 @@ const ExperienceElement = ({ item, theme }: ExperienceElementProps) => {
           fontSize: "1.5rem",
         }}
       >
-        <h3 className="font-semibold capitalize">{item.title}</h3>
-        <p className="font-normal !mt-0">{item.location}</p>
+        <h3 className="font-semibold capitalize text-[#854D0E] dark:text-yellow-200">
+          {item.title}
+        </h3>
+        <p className="font-normal !mt-0 text-[#075985] dark:text-[#95B6CA]">
+          {item.location}
+        </p>
         <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
           {item.description}
         </p>
@@ -65,7 +69,7 @@ export default function Experience() {
   const { theme } = useTheme();
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
-      <Heading>My Experience</Heading>
+      <Heading>My Study</Heading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
           <ExperienceElement theme={theme} key={index} item={item} />
